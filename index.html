@@ -1,32 +1,90 @@
-<title> KYSS special page</title>
+<title> Main page</title>
 <style>
-    .KYS-offer {
-        color: rgb(255,0,255);
-        font-family: Arial;
-        font-size: 25px;
-        width: 300px;
-        vertical-align: 25px;
-    }
-    .price {
-        font-style: italic;
-        font-family: Algerian;
-        font-weight: bold;
-        font-size: 25px;
-        color: rgb(255,0,255);
-        position: relative;
 
-        left: 140px;
-        top: -55px;
+    .KYS {
+        background-color: rgb(255, 0, 255);
+        color: white;
+        border: none;
+        height: 45px;
+        width: 120px;
+        border-radius: 20px;
+        cursor: pointer;
+        margin-right: 12px;
+        vertical-align: top;
+        transition: background-color 0.15s, color 0.15s,opacity 0.15s;
+
     }
-    .gun {
+    .KYS:hover {
+        background-color: white;
+         color: rgb(255, 0, 255);
+            border-color: rgb(255, 0, 255);
+            height: 45px;
+            width: 120px;
+            border-radius: 20px;
+            border-style: solid;
+            border-width: 1px;
+        }
+    .KYS:active {
+       opacity: 0.2;
+    }
+    .KYS-trans {
+        background-color: white;
+        color: rgb(255, 0, 255);
         border-color: rgb(255, 0, 255);
-        border-radius: 25px;
-        position: relative;
-        left: 400px;
-        top: -160px;
+        height: 45px;
+        width: 100px;
+        border-radius: 20px;
+        cursor: pointer;
+        border-style: solid;
+        border-width: 1px;
+        margin-right: 12px;
+        transition: background-color 0.15s, color 0.15s,opacity 0.15s;
+        vertical-align: top;
     }
+   .KYS-trans:hover {
+         color: black;
+         border-color: black;
+    }
+
+     .KYS-trans:active {
+      opacity: 0.2;
+     }
+    .KYS-rect {
+        background-color: rgb(255, 0, 255);
+        color: white;
+        border-color: rgb(255, 0, 255);
+        padding-top: 13px;
+        padding-bottom: 13px;
+        border-radius: 2px;
+        cursor: pointer;
+        border-style: solid;
+        border-width: 1px;
+        font-weight: bold;
+        box-shadow: 2px 2px 2px rgb(255, 0, 255, 0.4);
+        transition: opacity 0.15s,box-shadow 0.15s,padding 0.15s;
+    }
+        .KYS-rect:hover {
+            opacity: 0.7;
+            box-shadow: 1px 1px 1px rgb(255, 0, 255, 0.4);
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+   .KYS-rect:active{
+       opacity:0.2;
+   }
+
+   .KYS-link{
+       color: rgb(255, 0, 255);
+       margin-left:25px;
+       transition: opacity 0.15s;
+   }
+   .KYS-link:hover{
+       opacity: 0.4;
+   }
+
 
 </style>
-<p class="KYS-offer"> KYSS preimum edition is now available for the low low price of  </p>
-<p class="price">99.99</p>
-<img src="gun.jpg" alt="Our product" class="gun">
+<button class="KYS"> KYSS </button>
+<button class="KYS-trans"> KYSS transparent</button>
+<button class="KYS-rect"> KYSS rectangle </button>
+<a href="offer.html" target="_blank" class="KYS-Link"> KYSS HyperLink</a>
