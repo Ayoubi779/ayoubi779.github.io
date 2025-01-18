@@ -1,90 +1,71 @@
-<title> Main page</title>
-<style>
-
-    .KYS {
-        background-color: rgb(255, 0, 255);
-        color: white;
-        border: none;
-        height: 45px;
-        width: 120px;
-        border-radius: 20px;
-        cursor: pointer;
-        margin-right: 12px;
-        vertical-align: top;
-        transition: background-color 0.15s, color 0.15s,opacity 0.15s;
-
-    }
-    .KYS:hover {
-        background-color: white;
-         color: rgb(255, 0, 255);
-            border-color: rgb(255, 0, 255);
-            height: 45px;
-            width: 120px;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beating Heart</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #f8f9fa;
+            border: 10px solid #ffb6c1;
             border-radius: 20px;
-            border-style: solid;
-            border-width: 1px;
+            box-shadow: 0 0 15px rgba(255, 182, 193, 0.6);
         }
-    .KYS:active {
-       opacity: 0.2;
-    }
-    .KYS-trans {
-        background-color: white;
-        color: rgb(255, 0, 255);
-        border-color: rgb(255, 0, 255);
-        height: 45px;
-        width: 100px;
-        border-radius: 20px;
-        cursor: pointer;
-        border-style: solid;
-        border-width: 1px;
-        margin-right: 12px;
-        transition: background-color 0.15s, color 0.15s,opacity 0.15s;
-        vertical-align: top;
-    }
-   .KYS-trans:hover {
-         color: black;
-         border-color: black;
-    }
 
-     .KYS-trans:active {
-      opacity: 0.2;
-     }
-    .KYS-rect {
-        background-color: rgb(255, 0, 255);
-        color: white;
-        border-color: rgb(255, 0, 255);
-        padding-top: 13px;
-        padding-bottom: 13px;
-        border-radius: 2px;
-        cursor: pointer;
-        border-style: solid;
-        border-width: 1px;
-        font-weight: bold;
-        box-shadow: 2px 2px 2px rgb(255, 0, 255, 0.4);
-        transition: opacity 0.15s,box-shadow 0.15s,padding 0.15s;
-    }
-        .KYS-rect:hover {
-            opacity: 0.7;
-            box-shadow: 1px 1px 1px rgb(255, 0, 255, 0.4);
-            padding-left: 10px;
-            padding-right: 10px;
+        .heart {
+            position: relative;
+            width: 20vmin;
+            height: 20vmin;
+            background-color: pink;
+            transform: rotate(-45deg);
+            animation: beat 1s infinite;
         }
-   .KYS-rect:active{
-       opacity:0.2;
-   }
 
-   .KYS-link{
-       color: rgb(255, 0, 255);
-       margin-left:25px;
-       transition: opacity 0.15s;
-   }
-   .KYS-link:hover{
-       opacity: 0.4;
-   }
+        .heart::before,
+        .heart::after {
+            content: '';
+            position: absolute;
+            width: 20vmin;
+            height: 20vmin;
+            background-color: pink;
+            border-radius: 50%;
+        }
 
+        .heart::before {
+            top: -10vmin;
+            left: 0;
+        }
 
-</style>
-<button class="KYS"> KYSS </button>
-<button class="KYS-trans"> KYSS transparent</button>
-<button class="KYS-rect"> KYSS rectangle </button>
-<a href="offer.html" target="_blank" class="KYS-Link"> KYSS HyperLink</a>
+        .heart::after {
+            top: 0;
+            left: 10vmin;
+        }
+
+        @keyframes beat {
+            0%, 100% {
+                transform: scale(1) rotate(-45deg);
+            }
+            50% {
+                transform: scale(1.1) rotate(-45deg);
+            }
+        }
+
+        .text {
+            margin-top: 50px;
+            font-family: Arial, sans-serif;
+            font-size: 1.5rem;
+            color: #ff69b4;
+        }
+    </style>
+</head>
+<body>
+    <div class="heart"></div>
+    <div class="text">I love you sooooo much</div>
+</body>
+</html>
